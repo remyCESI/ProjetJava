@@ -9,7 +9,11 @@ import view.ViewFacade;
 /**
  * <h1>The Class Main.</h1>
  *
+<<<<<<< HEAD
  * @author Jean-Aymeric DIET jadiet@cesi.fr test TEST 12
+=======
+ * @author Groupe remy thibault pierre aurelien 
+
  * @version 1.0
  */
 public abstract class Main {
