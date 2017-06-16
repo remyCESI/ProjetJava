@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import controller.ControllerFacade;
 import model.ModelFacade;
+import view.Menu;
 import view.ViewFacade;
 
 /**
@@ -31,6 +32,7 @@ public abstract class Main {
         } catch (final SQLException exception) {
             exception.printStackTrace();
         }
+        new Menu();
     }
 
 }
