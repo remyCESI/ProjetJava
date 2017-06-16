@@ -12,10 +12,11 @@ public class Menu {
 	 */
 	public Menu() {
 		  level = 1;
+		  String dos = "Menu";
 		  String Newligne=System.getProperty("line.separator");
-		  ImageIcon perso_menu = new ImageIcon("C:/Users/KLEIN Aurélien/Desktop/Projet/6- Projet Java/perso_menu9.png");
-		  ImageIcon diams_menu = new ImageIcon("C:/Users/KLEIN Aurélien/Desktop/Projet/6- Projet Java/diams_menu.png");
-		  ImageIcon monster_menu = new ImageIcon("C:/Users/KLEIN Aurélien/Desktop/Projet/6- Projet Java/monster_menu3.png");
+		  ImageIcon perso_menu = new ImageIcon("C:/Users/KLEIN Aurélien/Desktop/Projet/6- Projet Java/BoulderDash-BaseProject/BoulderDash/ressourcepack/Menu/perso_menu9.png");
+		  ImageIcon diams_menu = new ImageIcon("C:/Users/KLEIN Aurélien/Desktop/Projet/6- Projet Java/BoulderDash-BaseProject/BoulderDash/ressourcepack/Menu/diams_menu.png");
+		  ImageIcon monster_menu = new ImageIcon("C:/Users/KLEIN Aurélien/Desktop/Projet/6- Projet Java/BoulderDash-BaseProject/BoulderDash/ressourcepack/Menu/monster_menu3.png");
 		  
 		  String[] lvl = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5"};
 		  String[] skn = {"Classic", "Minecraft"};
