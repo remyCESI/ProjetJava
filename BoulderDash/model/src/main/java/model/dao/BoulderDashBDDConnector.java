@@ -26,6 +26,9 @@ final class BoulderDashBDDConnector {
     /** The url. */
     private static String                  url      = "jdbc:mysql://mysql-pi-ux-ce.alwaysdata.net/pi-ux-ce_boulderdash?useSSL=false&serverTimezone=UTC";
 
+    
+/*jdbc:mysql://localhost/boulderdash?useSSL=false&serverTimezone=UTC*/
+/*jdbc:mysql://mysql-pi-ux-ce.alwaysdata.net/pi-ux-ce_projet?useSSL=false&serverTimezone=UTC"*/
     /** The connection. */
     private Connection                     connection;
 

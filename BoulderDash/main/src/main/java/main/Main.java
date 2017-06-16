@@ -5,16 +5,14 @@ import java.sql.SQLException;
 import controller.ControllerFacade;
 import model.ModelFacade;
 import view.ViewFacade;
-import view.Menu;
 
 /**
  * <h1>The Class Main.</h1>
  *
 
 
- * @author Groupe Remy VAN-CAMP Thibault POLY  Pierre GEERAERT Aurelien KLEIN
- * 
-
+ * @author Groupe remy thibault pierre aurelien 
+coucou
  * @version 1.0
  */
 public abstract class Main {
@@ -33,8 +31,6 @@ public abstract class Main {
         } catch (final SQLException exception) {
             exception.printStackTrace();
         }
-        
-		new Menu();
     }
 
 }
