@@ -7,13 +7,11 @@ import javax.swing.*;
 
 public class screenGame extends JPanel{
 
+	private Map m;
+	
 	
 	public void screen(Graphics g) {
-		try {
-		Image img = ImageIO.read(new File("perso_menu9.png"));
-	    g.drawImage(img, 0, 0, this);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		m = new Map();
+		
 	}
 }

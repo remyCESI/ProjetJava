@@ -30,7 +30,7 @@ public abstract class Main {
             exception.printStackTrace();
         }
 		new imgLoader();*/
-        new Menu();
-        //Game game1 = new Game();
+        //new Menu();
+        Game game1 = new Game();
     }
 }
