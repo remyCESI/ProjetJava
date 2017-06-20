@@ -1,8 +1,6 @@
 package main;
 
-import java.sql.SQLException;
-import controller.ControllerFacade;
-import model.*;
+import javax.swing.*;
 import view.*;
 
 /**
@@ -12,7 +10,7 @@ import view.*;
  * @version 1.0
  */
 
-public abstract class Main {
+public class BoulderDash {
 
     /**
      * The main method.
@@ -30,8 +28,13 @@ public abstract class Main {
             exception.printStackTrace();
         }
 		new imgLoader();*/
-        //new Menu();
-        Game game1 = new Game();
+        new Game();
         
+        /*SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+            	GFrame view = new GFrame();
+            }
+        });*/
     }
 }

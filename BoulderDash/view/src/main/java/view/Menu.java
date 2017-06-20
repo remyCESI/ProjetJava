@@ -3,7 +3,6 @@ package view;
 import javax.swing.*;
 import java.awt.Image;
 import java.io.*;
-import model.*;
 import javax.imageio.*;
 
 public class Menu {
@@ -19,7 +18,6 @@ public class Menu {
 	 * 
 	 */
 	public Menu() throws Exception {
-		  level = 1;
 		  String Newligne=System.getProperty("line.separator");
 		  
 		  String[] lvl = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5"}, skn = {"Classic", "Minecraft"};
@@ -37,13 +35,13 @@ public class Menu {
 		  ImageIcon monster_menu = new ImageIcon("img/monster_menu3.png");
 */
 		  
-		  String skin = (String)JOptionPane.showInputDialog(null, "Select the skin :", "BoulderDash Menu", JOptionPane.QUESTION_MESSAGE, perso_menu, skn, skn[0]);
+		  skin = (String)JOptionPane.showInputDialog(null, "Select the skin :", "BoulderDash Menu", JOptionPane.QUESTION_MESSAGE, perso_menu, skn, skn[1]);
 		  JOptionPane.showMessageDialog(null, skin + " skin selected !", "BoulderDash Menu", JOptionPane.INFORMATION_MESSAGE, perso_menu);		  
-		  if (skin == null) {
+		  /*if (skin == null) {
 			  
-		  }
+		  }*/
 		  
-		  int level = JOptionPane.showOptionDialog(null, "Select a level :", "BoulderDash Menu", JOptionPane.DEFAULT_OPTION,
+		  level = JOptionPane.showOptionDialog(null, "Select a level :", "BoulderDash Menu", JOptionPane.DEFAULT_OPTION,
 				  JOptionPane.QUESTION_MESSAGE, perso_menu, lvl, lvl[0]);
 		  level++;
 		  if (level != 5) {
@@ -52,6 +50,8 @@ public class Menu {
 		  else {
 			  JOptionPane.showMessageDialog(null, "Level " + level + " selected !" + Newligne + "Goal : Kill the monster", "BoulderDash Menu", JOptionPane.INFORMATION_MESSAGE, monster_menu);
 		  }
+		  skin = "skin" + skin;
+		  System.out.println(level);
 	  }
 	
 	

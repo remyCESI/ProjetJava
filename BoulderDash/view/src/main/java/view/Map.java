@@ -1,4 +1,4 @@
-package view;
+ package view;
 
 import java.awt.*;
 import java.io.*;
@@ -8,51 +8,117 @@ import javax.swing.*;
 public class Map {
 	
 	private Scanner m;
+	private String map[][] = new String[21][40];
 	private String Map[] = new String[40];
-	private Image sand, wall, empty, rock, diamond;
-	private ImageIcon img;
+	private Image sand, wall, empty, rock, diamond, monster, perso_face, perso_back, perso_left, perso_right;
+	private Menu menu;
+	private String skin;
+	private int level;
 	
 	
 	public Map(){
-		try {
-			img = new ImageIcon("img/wall.png");
+		try{
+			menu = new Menu();
+			skin = menu.getSkin();
+			level = menu.getLevel();
+			System.out.println(level);
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(skin);
+			System.out.println(level);
 		}
-		wall = img.getImage();
 		
 		try {
-			img = new ImageIcon("img/empty2.png");
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\wall.png";
+			ImageIcon img = new ImageIcon(path);
+			wall = img.getImage();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("load1 fail");
 		}
-		empty = img.getImage();
-		
 		try {
-			img = new ImageIcon("img/rock.png");
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\empty.png";
+			ImageIcon img = new ImageIcon(path);
+			empty = img.getImage();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("load2 fail");
 		}
-		rock = img.getImage();
-		
 		try {
-			img = new ImageIcon("img/diamond3.png");
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\rock.png";
+			ImageIcon img = new ImageIcon(path);
+			rock = img.getImage();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("load3 fail");
 		}
-		diamond = img.getImage();
-		
 		try {
-			img = new ImageIcon("img/sand.png");
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\diamond.png";
+			ImageIcon img = new ImageIcon(path);
+			diamond = img.getImage();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("load4 fail");
 		}
-		sand = img.getImage();
+		try {
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\sand.png";
+			ImageIcon img = new ImageIcon(path);
+			sand = img.getImage();
+		} catch (Exception e) {
+			System.out.println("load5 fail");
+		}
+		try {
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\monster.png";
+			ImageIcon img = new ImageIcon(path);
+			monster = img.getImage();
+		} catch (Exception e) {
+			System.out.println("load6 fail");
+		}
+		try {
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\perso_face.png";
+			ImageIcon img = new ImageIcon(path);
+			perso_face = img.getImage();
+		} catch (Exception e) {
+			System.out.println("load7 fail");
+		}
+		try {
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\perso_back.png";
+			ImageIcon img = new ImageIcon(path);
+			perso_back = img.getImage();
+		} catch (Exception e) {
+			System.out.println("load8 fail");
+		}
+		try {
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\perso_left.png";
+			ImageIcon img = new ImageIcon(path);
+			perso_left = img.getImage();
+		} catch (Exception e) {
+			System.out.println("load9 fail");
+		}
+		try {
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\" + skin + "\\perso_right.png";
+			ImageIcon img = new ImageIcon(path);
+			perso_right = img.getImage();
+		} catch (Exception e) {
+			System.out.println("load10 fail");
+		}
+		
 		
 		openFile();
+		try{
 		readFile();
+		completeMap();
+		} catch (Exception e) {
+			System.out.println("read fail");
+		}
 		closeFile();
 	}
+	
 	
 	public Image getWall() {
 		return wall;
@@ -69,25 +135,57 @@ public class Map {
 	public Image getSand() {
 		return sand;
 	}
+	public Image getMonster() {
+		return monster;
+	}
+	
+	public Image getPerso_face() {
+		return perso_face;
+	}
+	public Image getPerso_back() {
+		return perso_back;
+	}
+	public Image getPerso_left() {
+		return perso_left;
+	}
+	public Image getPerso_right() {
+		return perso_right;
+	}
 	
 	
 	public String getMap(int x, int y) {
-		String index = Map[y].substring(x, x+1);
+		//String index = Map[y].substring(x, x+1);
+		String index = map[y][x];
 		return index;
 	}
+	public void setMap(int x, int y, String sprite) {
+		//String index = Map[y].substring(x, x+1);
+		map[y][x] = sprite;
+	}
+	
 	
 	public void openFile() {
 		try {
-			m = new Scanner(new File("C:/Users/KLEIN Aurélien/Desktop/Projet/6- Projet Java/map_1.txt"));
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\img\\map_" + level + ".txt";
+			m = new Scanner(new File(path));
 		} catch (Exception e) {
-			System.out.println("error loading map");
+			System.out.println("load_map fail");
 		}
 	}
 	
 	public void readFile() {
 		while(m.hasNext()) {
-			for(int i = 0; i < 40; i++) {
+			for(int i = 0; i < 21; i++) {
 				Map[i] = m.next();
+			}
+		}
+	}
+	
+	private void completeMap() {
+		for(int x = 0; x < 40; x++) {
+			for(int y = 0; y<21; y++) {
+				map[y][x] = Map[y].substring(x, x+1);
 			}
 		}
 	}
