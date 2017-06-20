@@ -1,3 +1,7 @@
+/* 
+@author Thibault
+Panel of game 
+ */
 package gameFrame;
 import java.util.*;
 

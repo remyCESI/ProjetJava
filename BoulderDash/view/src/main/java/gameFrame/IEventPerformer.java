@@ -1,7 +1,9 @@
 package gameFrame;
+
+import java.awt.event.KeyEvent;
+
 /*probleme mais je vois pas quoi*/
-import view.KeyEvent;
 
 public interface IEventPerformer {
-    public void eventPerform(KeyEvent keycode){}
+    public void eventPerform(KeyEvent keycode);
 }
