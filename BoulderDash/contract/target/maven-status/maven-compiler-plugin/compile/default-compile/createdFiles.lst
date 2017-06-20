@@ -1,4 +1,4 @@
-view/IView.class
-model/IModel.class
-controller/IController.class
-model/Example.class
+view\IView.class
+model\Example.class
+model\IModel.class
+controller\IController.class
