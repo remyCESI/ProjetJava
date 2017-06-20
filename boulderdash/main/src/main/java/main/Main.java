@@ -8,7 +8,8 @@ import view.ViewFacade;
 /**
  * <h1>The Class Main.</h1>
  *The main method.
- * @author Groupe  thibault 
+ *@author Tibo poly
+ * @param args 
  * @version 1.0
  */
 public abstract class Main {
