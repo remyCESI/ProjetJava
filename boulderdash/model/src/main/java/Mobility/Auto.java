@@ -23,6 +23,7 @@ public class Auto extends BehaviorMove{
 /**
  * this method comes of BehaviorMove class. we will go override this method to adapt it to the class
  * @param element
+ * @return the movement of the enemy
  */
 	@Override
 	public void move(Element element) {

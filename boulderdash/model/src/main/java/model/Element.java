@@ -55,18 +55,40 @@ public abstract class Element implements IElement{
 	public void setY(int y) {
 		Y = y;
 	}
+	/**
+	 * she allows to collect the element type 
+	 * @return Type
+	 */
 	public String getType() {
 		return Type;
 	}
+	/**
+	 * she initializes the element type. 
+	 * @param type.
+	 */
 	public void setType(String type) {
 		Type = type;
 	}
+	/**
+	 * she allows to recover the images.
+	 * @param image
+	 * @return image 
+	 */
 	public Image getImage(Image image){
 		return image;	
 	}
+	/**
+	 * she recovered the sprite element
+	 * @param image
+	 * @return image
+	 */
 	public Image getSpriteElement(Image image){
 		return image;
 	}
+	
+	/**
+	 * 
+	 */
 	public void getBehaviorMove(BehaviorMove behaviorMove)
 	{
 		return;

@@ -6,8 +6,10 @@ package model;
 import java.util.ArrayList;
 
 /**
- * @author L1dien
- *
+ * @author remy
+ * <H1> The IBoulderDashModel interface  </H1>
+ *	She allows the use of the methods anywhere in the code thanks to Contract module.
+ * 
  */
 public interface IBoulderDashModel {
 

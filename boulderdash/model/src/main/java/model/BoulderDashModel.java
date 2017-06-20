@@ -41,6 +41,7 @@ public class BoulderDashModel extends Observable implements IBoulderDashModel{
 	}
 
 	/**
+	 * she allows to collect a element list
 	 * 
 	 */
 	public ArrayList<Element> getElement(){
@@ -48,16 +49,34 @@ public class BoulderDashModel extends Observable implements IBoulderDashModel{
 		return null;
 
 	}
+	/**
+	 * she is used for create an environment based on a map. 
+	 * @param map   
+	 */
 	public void buildMap( Map map){
 
 	}
+	/**
+	 * she allows to take the level choice
+	 * @param level
+	 */
 
 	public void getLevel(Menu level){
 
 	}
+	
+	/**
+	 * she go to update the score. 
+	 * @param score
+	 */
 	public void SetScore(Score score){
 
 	}
+	
+	/**
+	 * she allows to take the score
+	 * @param score.
+	 */
 	public void GetScore(Score score){
 		
 

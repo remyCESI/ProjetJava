@@ -9,8 +9,9 @@ import Mobility.BehaviorMove;
 
 /**
  * @author L1dien
- * <H1> the ICollect interface</H1> 
- *she allows to attribute the ability to create an element anywhere in the code
+ * <H1> the IElement interface</H1> 
+ *she allows to attribute the ability to create an element anywhere in the code.
+ *
  *
  */
 public interface IElement {
