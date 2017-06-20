@@ -3,6 +3,7 @@ package main;
 import java.sql.SQLException;
 
 import controller.ControllerFacade;
+import model.BoulderDashModel;
 import model.ModelFacade;
 import view.ViewFacade;
 
@@ -24,7 +25,7 @@ public abstract class Main {
      *            the arguments
      */
     public static void main(final String[] args) {
-        final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
+        final ControllerFacade controller = new BoulderDashController(new BoulderDashView(), new BoulderDashModel());
 
         try {
             controller.start();
