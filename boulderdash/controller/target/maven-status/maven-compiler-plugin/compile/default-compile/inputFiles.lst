@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/pi-ux-ce/git/ProjetJava/BoulderDash/controller/src/main/java/controller/ControllerFacade.java
 /home/pi-ux-ce/git/ProjetJava/BoulderDash/controller/src/main/java/controller/package-info.java
 =======
 C:\Users\leola\Documents\GitHub\ProjetJava\BoulderDash\controller\src\main\java\controller\ControllerFacade.java
 C:\Users\leola\Documents\GitHub\ProjetJava\BoulderDash\controller\src\main\java\controller\package-info.java
 >>>>>>> 30aad722f90969ead16c4797c02d1017eb410765
+=======
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/controller/src/main/java/controller/ControllerFacade.java
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/controller/src/main/java/controller/package-info.java
+>>>>>>> branch 'master' of https://github.com/remyCESI/ProjetJava

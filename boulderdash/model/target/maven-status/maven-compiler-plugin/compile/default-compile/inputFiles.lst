@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/dao/package-info.java
 /home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/ModelFacade.java
 /home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/package-info.java
@@ -13,3 +14,11 @@ C:\Users\leola\Documents\GitHub\ProjetJava\BoulderDash\model\src\main\java\model
 C:\Users\leola\Documents\GitHub\ProjetJava\BoulderDash\model\src\main\java\model\ModelFacade.java
 C:\Users\leola\Documents\GitHub\ProjetJava\BoulderDash\model\src\main\java\model\dao\ExampleDAO.java
 >>>>>>> 30aad722f90969ead16c4797c02d1017eb410765
+=======
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/dao/package-info.java
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/ModelFacade.java
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/package-info.java
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/dao/BoulderDashBDDConnector.java
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/dao/ExampleDAO.java
+/home/pi-ux-ce/git/ProjetJava/BoulderDash/model/src/main/java/model/dao/AbstractDAO.java
+>>>>>>> branch 'master' of https://github.com/remyCESI/ProjetJava

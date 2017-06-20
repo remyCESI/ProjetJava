@@ -13,7 +13,7 @@ import view.ViewFacade;
 
 
  * @author Groupe remy thibault pierre aurelien 
-coucou
+coucou*
  * @version 1.0
  */
 public abstract class Main {
