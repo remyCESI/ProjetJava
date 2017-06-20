@@ -1,7 +1,5 @@
 package main;
 
-
-
 import controller.ControllerFacade;
 import model.BoulderDashModel;
 

@@ -20,13 +20,15 @@ public class Rock extends Element implements IKill {
 	/**
 	 * 
 	 */
-	public Rock() {
-		// TODO Auto-generated constructor stub
-	}
+	
 	
 	private Image spriteElement(){
 		return null;
 		
+	}
+	public Rock(int X, int Y, String Type) {
+		super(X, Y, Type);
+		// TODO Auto-generated constructor stub
 	}
 	public void collect(){
 		

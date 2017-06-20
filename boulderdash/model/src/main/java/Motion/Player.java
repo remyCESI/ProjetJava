@@ -17,10 +17,13 @@ public class Player extends Element implements IPushRock, IDeath{
 	
 	public static int HARDNESS = 2 ;
 
-	public Player() {
+	
+	
+	public Player(int X, int Y, String Type) {
+		super(X, Y, Type);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	private Image spriteElement(){
 		
 		return null;

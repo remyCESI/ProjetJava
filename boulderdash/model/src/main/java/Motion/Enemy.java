@@ -20,13 +20,16 @@ public class Enemy extends Element implements IDeath, IKill{
 	/**
 	 * 
 	 */
-	public Enemy() {
-		// TODO Auto-generated constructor stub
-	}
+	
 	private Image spriteElement(){
 
 		return null;
 
+	}
+
+	public Enemy(int X, int Y, String Type) {
+		super(X, Y, Type);
+		// TODO Auto-generated constructor stub
 	}
 
 	public void drop(){

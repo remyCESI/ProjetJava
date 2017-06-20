@@ -15,10 +15,13 @@ import model.ICollect;
 public class Sand extends Element implements ICollect {
 
 	public static int HARDNESS = 1;
-	public Sand() {
+	
+	
+	public Sand(int X, int Y, String Type) {
+		super(X, Y, Type);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	private Image spriteElement(){
 		return null;
 	}
