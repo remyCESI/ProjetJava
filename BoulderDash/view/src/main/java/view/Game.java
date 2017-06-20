@@ -7,11 +7,12 @@ public class Game extends JFrame{
 	
 	public Game() {
 		this.setTitle("BoulderDash");
-		this.setSize(1800, 1000);
+		this.setSize(640, 320);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
 		
-	    this.setContentPane(new screenGame());
+	    this.add(new screenGame());
 	}
 }

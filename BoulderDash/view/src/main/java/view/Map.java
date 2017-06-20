@@ -10,19 +10,43 @@ public class Map {
 	private Scanner m;
 	private String Map[] = new String[40];
 	private Image sand, wall, empty, rock, diamond;
+	private ImageIcon img;
 	
 	
 	public Map(){
-		
-		ImageIcon img = new ImageIcon("img/wall.png");
+		try {
+			img = new ImageIcon("img/wall.png");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		wall = img.getImage();
-		img = new ImageIcon("img/empty2.png");
+		
+		try {
+			img = new ImageIcon("img/empty2.png");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		empty = img.getImage();
-		img = new ImageIcon("img/rock.png");
+		
+		try {
+			img = new ImageIcon("img/rock.png");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		rock = img.getImage();
-		img = new ImageIcon("img/diamond3.png");
+		
+		try {
+			img = new ImageIcon("img/diamond3.png");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		diamond = img.getImage();
-		img = new ImageIcon("img/sand.png");
+		
+		try {
+			img = new ImageIcon("img/sand.png");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		sand = img.getImage();
 		
 		openFile();

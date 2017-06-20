@@ -32,5 +32,6 @@ public abstract class Main {
 		new imgLoader();*/
         //new Menu();
         Game game1 = new Game();
+        
     }
 }
