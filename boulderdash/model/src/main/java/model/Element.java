@@ -9,6 +9,7 @@ import Mobility.BehaviorMove;
 
 /**
  * @author Remy
+ *<H1> Element class </H1>
  *
  */
 public abstract class Element implements IElement{
@@ -18,19 +19,39 @@ public abstract class Element implements IElement{
 	private String Type;
 	private BehaviorMove behaviorMove;
 
-	public Element() {
+
+	public Element(int X, int Y , String Type) {
 		// TODO Auto-generated constructor stub
 
 	}
+
+	/*
+	 *	It takes X
+	 * @see model.IElement#getX()
+	 * @return X
+	 */
 	public int getX() {
 		return X;
 	}
+	/**
+	 * initializes X 
+	 * @param x
+	 */
 	public void setX(int x) {
 		X = x;
 	}
+	/*
+	 *	It takes Y
+	 * @see model.IElement#getX()
+	 * @return Y
+	 */
 	public int getY() {
 		return Y;
 	}
+	/**
+	 * initializes Y 
+	 * @param y
+	 */
 	public void setY(int y) {
 		Y = y;
 	}

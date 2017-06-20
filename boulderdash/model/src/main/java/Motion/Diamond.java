@@ -10,21 +10,31 @@ import model.ICollect;
 import model.IKill;
 
 /**
- * @author L1dien
- *
+ * @author remy
+ * <H1> the Diamond class</H1>
+ *@see Element.
  */
 public class Diamond extends Element implements IKill, ICollect {
 
+	
 	private static int HARDNESS = 1;
-	public Diamond() {
+
+	
+	public Diamond(int X, int Y, String Type) {
+		
+		super(X, Y, Type);
 		// TODO Auto-generated constructor stub
 	}
+
 	
 	public Image spriteElement(){
 		return null;
 		
 	}
 
+		/**
+		 * she allows 
+		 */
 	@Override
 	public void kill() {
 		// TODO Auto-generated method stub

@@ -5,6 +5,8 @@ package model;
 
 /**
  * @author remy
+ * <H1> the Map enum</H1>
+ * it's just a list to collect the names of the maps 
  *
  */
 public enum Map {

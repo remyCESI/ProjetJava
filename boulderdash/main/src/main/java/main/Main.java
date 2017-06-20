@@ -1,10 +1,10 @@
 package main;
 
-import java.sql.SQLException;
+
 
 import controller.ControllerFacade;
 import model.BoulderDashModel;
-import model.ModelFacade;
+
 import view.ViewFacade;
 
 /**
@@ -29,7 +29,7 @@ public abstract class Main {
 
         try {
             controller.start();
-        } catch (final SQLException exception) {
+        } catch (final Exception exception) {
             exception.printStackTrace();
         }
     }

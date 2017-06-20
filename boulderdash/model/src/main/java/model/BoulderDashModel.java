@@ -9,6 +9,8 @@ import java.util.Observable;
 
 /**
  * @author remy
+ * <H1>BoulderDashModel Class</H1>
+ * 
  *
  */
 public class BoulderDashModel extends Observable implements IBoulderDashModel{
@@ -23,14 +25,24 @@ public class BoulderDashModel extends Observable implements IBoulderDashModel{
 	public BoulderDashModel() {
 		// TODO Auto-generated constructor stub
 	}
-
+/**
+ * She allows to retrieve the map choice. 
+ * @return map choice.
+ */
 	public Map getMap() {
 		return map;
 	}
+	/**
+	 * She allows to choice the map. 
+	 * 
+	 */
 	public void setMap(Map map) {
 		this.map = map;
 	}
 
+	/**
+	 * 
+	 */
 	public ArrayList<Element> getElement(){
 
 		return null;
