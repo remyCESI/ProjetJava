@@ -2,6 +2,8 @@ package view;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.concurrent.TimeUnit;
+
 import javax.swing.*;
 
 public class Board extends JPanel implements ActionListener{
@@ -12,6 +14,7 @@ public class Board extends JPanel implements ActionListener{
 	private Image image, dir;
 	private boolean cheat = false;
 	private String cht = "";
+	private int score = 0;
 	
 	
 	public Board() {
@@ -73,8 +76,55 @@ public class Board extends JPanel implements ActionListener{
 		}
 		g.setFont(new Font("Courier", Font.BOLD, 20));
 		g.setColor(Color.WHITE);
-		g.drawString(cht, 48, 960);
+		g.drawString(cht, 48, 990);
 		g.drawImage(dir, p.getX()*48, p.getY()*48, 48, 48, this);
+		
+		switch (m.getMap(p.getX(), p.getY())) {
+		case "X" : m.setMap(p.getX(), p.getY(), "_"); Gravity(p.getX(), p.getY()); break;
+		case "V" : m.setMap(p.getX(), p.getY(), "_"); score = score + 10; Gravity(p.getX(), p.getY()); break;
+		case "W" : m.setMap(p.getX(), p.getY(), "_"); score += 60; Gravity(p.getX(), p.getY()); break;
+		}
+		
+		g.setFont(new Font("Courier", Font.BOLD, 30));
+		g.drawString("Score : " + score, 192, 990);
+		if (score == 100) {
+			g.setFont(new Font("Courier", Font.BOLD, 70));
+			g.drawString("Well Played !", 760, 504);
+			try {
+				TimeUnit.SECONDS.sleep(2);
+			} catch (InterruptedException e) {
+				System.out.println("TimeSleep fail");
+			}
+		}
+	}
+	
+	
+	/*private Timer createTimer() {
+		
+		ActionListener action = new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				if (m.getMap(x, y).equals("O")) {
+					m.setMap(x, y, "_");
+					m.setMap(x, y+1, "O");
+					y = y+1;
+				}
+			}
+		}
+		
+		return new Timer(500, action);
+	}*/
+	
+	
+	public void Gravity(int x, int y) {
+		y = y-1;
+		if (m.getMap(x, y).equals("O")) {
+			while (m.getMap(x, y+1).equals("_")) {
+				m.setMap(x, y, "_");
+				m.setMap(x, y+1, "O");
+				y = y+1;
+				
+			}
+		}
 	}
 	
 	public class Action extends KeyAdapter {

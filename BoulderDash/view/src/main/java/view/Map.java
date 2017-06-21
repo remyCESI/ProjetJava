@@ -107,42 +107,40 @@ public class Map {
 		} catch (Exception e) {
 			System.out.println("load10 fail");
 		}
-		if (skin.equals("skinMinecraft") && level == 5) {
 			String basePath = new File("").getAbsolutePath();
-			String path = basePath + "\\..\\view\\skinMinecraft\\coal_ore.png";
+			String path = basePath + "\\..\\view\\" + skin + "\\coal_ore.png";
 			ImageIcon img = new ImageIcon(path);
 			coal_ore = img.getImage();
 			
 			basePath = new File("").getAbsolutePath();
-			path = basePath + "\\..\\view\\skinMinecraft\\emerald_ore.png";
+			path = basePath + "\\..\\view\\" + skin + "\\emerald_ore.png";
 			img = new ImageIcon(path);
 			emerald_ore = img.getImage();
 			
 			basePath = new File("").getAbsolutePath();
-			path = basePath + "\\..\\view\\skinMinecraft\\iron_ore.png";
+			path = basePath + "\\..\\view\\" + skin + "\\iron_ore.png";
 			img = new ImageIcon(path);
 			iron_ore = img.getImage();
 			
 			basePath = new File("").getAbsolutePath();
-			path = basePath + "\\..\\view\\skinMinecraft\\diamond_ore.png";
+			path = basePath + "\\..\\view\\" + skin + "\\diamond_ore.png";
 			img = new ImageIcon(path);
 			diamond_ore = img.getImage();
 			
 			basePath = new File("").getAbsolutePath();
-			path = basePath + "\\..\\view\\skinMinecraft\\gold_ore.png";
+			path = basePath + "\\..\\view\\" + skin + "\\gold_ore.png";
 			img = new ImageIcon(path);
 			gold_ore = img.getImage();
 			
 			basePath = new File("").getAbsolutePath();
-			path = basePath + "\\..\\view\\skinMinecraft\\lapis_ore.png";
+			path = basePath + "\\..\\view\\" + skin + "\\lapis_ore.png";
 			img = new ImageIcon(path);
 			lapis_ore = img.getImage();
 			
 			basePath = new File("").getAbsolutePath();
-			path = basePath + "\\..\\view\\skinMinecraft\\redstone_ore.png";
+			path = basePath + "\\..\\view\\" + skin + "\\redstone_ore.png";
 			img = new ImageIcon(path);
 			redstone_ore = img.getImage();
-		}
 		
 		
 		openFile();
