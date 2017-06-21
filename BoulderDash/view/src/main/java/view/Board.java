@@ -10,6 +10,8 @@ public class Board extends JPanel implements ActionListener{
 	private Player p;
 	private Timer timer;
 	private Image image, dir;
+	private boolean cheat = false;
+	private String cht = "";
 	
 	
 	public Board() {
@@ -57,12 +59,22 @@ public class Board extends JPanel implements ActionListener{
 				case "O" : image = m.getRock(); break;
 				case "_" : image = m.getEmpty(); break;
 				case "Y" : image = m.getMonster(); break;
+				case "c" : image = m.getCoal_ore(); break;
+				case "i" : image = m.getIron_ore(); break;
+				case "d" : image = m.getDiamond_ore(); break;
+				case "g" : image = m.getGold_ore(); break;
+				case "e" : image = m.getEmerald_ore(); break;
+				case "l" : image = m.getLapis_ore(); break;
+				case "r" : image = m.getRedstone_ore(); break;
 				default : image = m.getWall(); break;
 				}
 				g.drawImage(image, x*48, y*48, 48, 48, null);
 			}
 		}
-		g.drawImage(dir, p.getX(), p.getY(), 48, 48, this);
+		g.setFont(new Font("Courier", Font.BOLD, 20));
+		g.setColor(Color.WHITE);
+		g.drawString(cht, 48, 960);
+		g.drawImage(dir, p.getX()*48, p.getY()*48, 48, 48, this);
 	}
 	
 	public class Action extends KeyAdapter {
@@ -71,20 +83,37 @@ public class Board extends JPanel implements ActionListener{
 			int keycode = e.getKeyCode();
 			
 			if(keycode == KeyEvent.VK_UP) {
-				p.move(0, -48, 0, -1);
+				if(!m.getMap(p.getX(), p.getY()-1).equals("H") && !m.getMap(p.getX(), p.getY()-1).equals("O") || cheat) {
+					p.move(0, -1);
+				}
 				dir = m.getPerso_back();
 			}
 			if(keycode == KeyEvent.VK_DOWN) {
-				p.move(0, 48, 0, 1);
+				if(!m.getMap(p.getX(), p.getY()+1).equals("H") && !m.getMap(p.getX(), p.getY()+1).equals("O") || cheat) {
+					p.move(0, 1);
+				}
 				dir = m.getPerso_face();
 			}
 			if(keycode == KeyEvent.VK_LEFT) {
-				p.move(-48, 0, -1, 0);
+				if(!m.getMap(p.getX()-1, p.getY()).equals("H") && !m.getMap(p.getX()-1, p.getY()).equals("O") || cheat) {
+					p.move(-1, 0);
+				}
 				dir = m.getPerso_left();
 			}
 			if(keycode == KeyEvent.VK_RIGHT) {
-				p.move(48, 0, 1, 0);
+				if(!m.getMap(p.getX()+1, p.getY()).equals("H") && !m.getMap(p.getX()+1, p.getY()).equals("O") || cheat) {
+					p.move(1, 0);
+				}
 				dir = m.getPerso_right();
+			}
+			if(keycode == KeyEvent.VK_C) {
+				if (cheat) {
+					cheat = false;
+					cht = "";
+				} else {
+					cheat = true;
+					cht = "Cheat ON";
+				}
 			}
 		}
 	}

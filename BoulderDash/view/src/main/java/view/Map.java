@@ -10,7 +10,9 @@ public class Map {
 	private Scanner m;
 	private String map[][] = new String[21][40];
 	private String Map[] = new String[40];
-	private Image sand, wall, empty, rock, diamond, monster, perso_face, perso_back, perso_left, perso_right;
+	private Image sand, wall, empty, rock, diamond, monster;
+	private Image perso_face, perso_back, perso_left, perso_right;
+	private Image coal_ore, iron_ore, diamond_ore, gold_ore, emerald_ore, redstone_ore, lapis_ore;
 	private Menu menu;
 	private String skin;
 	private int level;
@@ -21,10 +23,8 @@ public class Map {
 			menu = new Menu();
 			skin = menu.getSkin();
 			level = menu.getLevel();
-			System.out.println(level);
 		} catch (Exception e) {
-			System.out.println(skin);
-			System.out.println(level);
+			System.out.println(skin + level);
 		}
 		
 		try {
@@ -107,6 +107,42 @@ public class Map {
 		} catch (Exception e) {
 			System.out.println("load10 fail");
 		}
+		if (skin.equals("skinMinecraft") && level == 5) {
+			String basePath = new File("").getAbsolutePath();
+			String path = basePath + "\\..\\view\\skinMinecraft\\coal_ore.png";
+			ImageIcon img = new ImageIcon(path);
+			coal_ore = img.getImage();
+			
+			basePath = new File("").getAbsolutePath();
+			path = basePath + "\\..\\view\\skinMinecraft\\emerald_ore.png";
+			img = new ImageIcon(path);
+			emerald_ore = img.getImage();
+			
+			basePath = new File("").getAbsolutePath();
+			path = basePath + "\\..\\view\\skinMinecraft\\iron_ore.png";
+			img = new ImageIcon(path);
+			iron_ore = img.getImage();
+			
+			basePath = new File("").getAbsolutePath();
+			path = basePath + "\\..\\view\\skinMinecraft\\diamond_ore.png";
+			img = new ImageIcon(path);
+			diamond_ore = img.getImage();
+			
+			basePath = new File("").getAbsolutePath();
+			path = basePath + "\\..\\view\\skinMinecraft\\gold_ore.png";
+			img = new ImageIcon(path);
+			gold_ore = img.getImage();
+			
+			basePath = new File("").getAbsolutePath();
+			path = basePath + "\\..\\view\\skinMinecraft\\lapis_ore.png";
+			img = new ImageIcon(path);
+			lapis_ore = img.getImage();
+			
+			basePath = new File("").getAbsolutePath();
+			path = basePath + "\\..\\view\\skinMinecraft\\redstone_ore.png";
+			img = new ImageIcon(path);
+			redstone_ore = img.getImage();
+		}
 		
 		
 		openFile();
@@ -114,7 +150,7 @@ public class Map {
 		readFile();
 		completeMap();
 		} catch (Exception e) {
-			System.out.println("read fail");
+			System.out.println("read/complete fail");
 		}
 		closeFile();
 	}
@@ -138,6 +174,32 @@ public class Map {
 	public Image getMonster() {
 		return monster;
 	}
+	
+	
+	
+	public Image getCoal_ore() {
+		return coal_ore;
+	}
+	public Image getIron_ore() {
+		return iron_ore;
+	}
+	public Image getGold_ore() {
+		return gold_ore;
+	}
+	public Image getDiamond_ore() {
+		return diamond_ore;
+	}
+	public Image getLapis_ore() {
+		return lapis_ore;
+	}
+	public Image getEmerald_ore() {
+		return emerald_ore;
+	}
+	public Image getRedstone_ore() {
+		return redstone_ore;
+	}
+	
+	
 	
 	public Image getPerso_face() {
 		return perso_face;
