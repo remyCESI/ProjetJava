@@ -6,16 +6,24 @@ package Mobility;
 import model.Element;
 
 /**
- * @author L1dien
- *
+ * @author remy
+ * <H1> The Gravity class </H1>
+ * @see BehaviorMove
  */
 public class Gravity extends BehaviorMove{
 
 	/**
-	 * 
+	 * The gravity method allows to down the specialized elements.
+	 * As long as there are no elements under the rock or under the diamond, they are going to come down until the meeting of an obstacle. 
 	 */
-	public Gravity() {
+	public Gravity(Element element) {
 		// TODO Auto-generated constructor stub
+		while( ){
+			
+		element.setY(element.getY()+1);
+		
+		}
+		
 	}
 
 	/**
@@ -23,6 +31,7 @@ public class Gravity extends BehaviorMove{
 	 * In this class, the elements will be gravity. for example the rock, they fall down until meeting an obstacle.
 	 * @param element 
 	 */
+	
 	@Override
 	public void move(Element element) {
 		// TODO Auto-generated method stub

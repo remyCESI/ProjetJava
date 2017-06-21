@@ -12,6 +12,7 @@ import java.awt.event.KeyEvent;
 public class EventPerformer implements gameFrame.IEventPerformer , IOrderPerformer {
 /*il faut les types des parametres et verifier interface qui ?tait jpu2016.dogfightcontroller*/
 
+	private IOrderPerformer orderPerformer;
     public EventPerformer(IOrderPerformer orderPerformer){
     
 }

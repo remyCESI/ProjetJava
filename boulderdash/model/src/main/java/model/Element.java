@@ -18,6 +18,7 @@ public abstract class Element implements IElement{
 	private int Y;
 	private String Type;
 	private BehaviorMove behaviorMove;
+	
 
 
 	public Element(int X, int Y , String Type) {
@@ -92,5 +93,13 @@ public abstract class Element implements IElement{
 	public void getBehaviorMove(BehaviorMove behaviorMove)
 	{
 		return;
+	}
+
+	public BehaviorMove getBehaviorMove() {
+		return behaviorMove;
+	}
+
+	public void setBehaviorMove(BehaviorMove behaviorMove) {
+		this.behaviorMove = behaviorMove;
 	}
 }
