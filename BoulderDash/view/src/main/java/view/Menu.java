@@ -36,10 +36,9 @@ public class Menu {
 */
 		  
 		  skin = (String)JOptionPane.showInputDialog(null, "Select the skin :", "BoulderDash Menu", JOptionPane.QUESTION_MESSAGE, perso_menu, skn, skn[1]);
-		  JOptionPane.showMessageDialog(null, skin + " skin selected !", "BoulderDash Menu", JOptionPane.INFORMATION_MESSAGE, perso_menu);		  
-		  /*if (skin == null) {
-			  
-		  }*/
+		  if (skin == null) System.exit(0); 
+		  //JOptionPane.showMessageDialog(null, skin + " skin selected !", "BoulderDash Menu", JOptionPane.INFORMATION_MESSAGE, perso_menu);		  
+		  
 		  
 		  level = JOptionPane.showOptionDialog(null, "Select a level :", "BoulderDash Menu", JOptionPane.DEFAULT_OPTION,
 				  JOptionPane.QUESTION_MESSAGE, perso_menu, lvl, lvl[0]);

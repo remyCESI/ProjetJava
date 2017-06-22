@@ -1,9 +1,13 @@
-package view;
+package model;
 
-public class Player {
+
+public class Player implements IPlayer{
 	
 	private int x, y;
 	
+	public void generate() {
+		new Player();
+	}
 	
 	public Player() {
 		x = 3;
@@ -21,4 +25,5 @@ public class Player {
 		x += u;
 		y += v;
 	}
+
 }

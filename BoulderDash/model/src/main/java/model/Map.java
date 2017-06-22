@@ -1,11 +1,12 @@
- package view;
+package model;
 
 import java.awt.*;
 import java.io.*;
 import java.util.*;
 import javax.swing.*;
+import view.*;
 
-public class Map implements IMap{
+public class Map {
 	
 	private Scanner m;
 	private String map[][] = new String[21][40];
@@ -13,14 +14,14 @@ public class Map implements IMap{
 	private Image sand, wall, empty, rock, diamond, monster;
 	private Image perso_face, perso_back, perso_left, perso_right;
 	private Image coal_ore, iron_ore, diamond_ore, gold_ore, emerald_ore, redstone_ore, lapis_ore;
-	private Menu menu;
+	private IMenu menu;
 	private String skin;
 	private int level;
 	
 	
-	public Map(){
+	public Map() {
 		try{
-			menu = new Menu();
+			menu.generate();
 			skin = menu.getSkin();
 			level = menu.getLevel();
 		} catch (Exception e) {
@@ -253,5 +254,7 @@ public class Map implements IMap{
 	public void closeFile() {
 		m.close();
 	}
+
+
 	
 }

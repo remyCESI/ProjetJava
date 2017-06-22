@@ -1,7 +1,6 @@
 package main;
 
-import javax.swing.*;
-import view.*;
+import view.Game;
 
 /**
  * <h1>The Class Main.</h1>
@@ -19,15 +18,15 @@ public class BoulderDash {
      *            the arguments
      * @throws Exception 
      */
-    public static void main(final String[] args) throws Exception {
-        /*final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
+	public static void main(final String[] args) throws Exception {
+        /*final ControllerFacade controller = new BoulderDashController(new Game(), new Map());
 
         try {
             controller.start();
         } catch (final SQLException exception) {
             exception.printStackTrace();
-        }
-		new imgLoader();*/
+        }*/
+		
         new Game();
         
         /*SwingUtilities.invokeLater(new Runnable() {
