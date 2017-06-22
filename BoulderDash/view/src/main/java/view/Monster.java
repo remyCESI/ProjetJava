@@ -4,13 +4,13 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Monster {
+public class Monster implements Runnable{
 
-	private int x, y, t=0;
+	private int x, y;
 	private Random r;
-	private IMap m;
+	private Map m;
 	
-	
+	/*
 	Timer tmr = new Timer();
 	TimerTask task = new TimerTask() {
 		public void run() {
@@ -22,6 +22,18 @@ public class Monster {
 	
 	public void start() {
 		tmr.scheduleAtFixedRate(task, 500, 500);
+	}*/
+	
+	public void run() {
+		while (true) {
+			moveM();
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				System.out.println("sleep fail");
+			}
+		}
+		
 	}
 	
 	public Monster() {
@@ -48,6 +60,7 @@ public class Monster {
 		r = new Random();
 		int f = r.nextInt(4-0);
 		System.out.println(f);
+		System.out.println(m.getMap(10, 10));
 		
 		switch (f) {
 		case 0 : moveUp(); break;
@@ -60,9 +73,8 @@ public class Monster {
 	}
 	
 	public void moveUp() {
-		if(m.getMap(getX(), getY()-1).equals("_")) {
-			y = getY()-1;
-			setY(y);
+		if(m.getMap(x, y-1).equals("_")) {
+			y = y-1;
 			m.setMap(x, y, "Y");
 			m.setMap(x, y+1, "_");
 		} else {
@@ -70,9 +82,8 @@ public class Monster {
 		}
 	}
 	public void moveDown() {
-		if(m.getMap(getX(), getY()+1).equals("_")) {
-			y = getY()+1;
-			setY(y);
+		if(m.getMap(x, y+1).equals("_")) {
+			y = y+1;
 			m.setMap(x, y, "Y");
 			m.setMap(x, y-1, "_");
 		} else {
@@ -80,9 +91,8 @@ public class Monster {
 		}
 	}
 	public void moveLeft() {
-		if(m.getMap(getX()-1, getY()).equals("_")) {
-			x = getX()-1;
-			setX(x);
+		if(m.getMap(x-1, y).equals("_")) {
+			x = x-1;
 			m.setMap(x, y, "Y");
 			m.setMap(x+1, y, "_");
 		} else {
@@ -90,9 +100,8 @@ public class Monster {
 		}
 	}
 	public void moveRight() {
-		if(m.getMap(getX()+1, getY()).equals("_")) {
-			x = getX()+1;
-			setX(x);
+		if(m.getMap(x+1, y).equals("_")) {
+			x = x+1;
 			m.setMap(x, y, "Y");
 			m.setMap(x-1, y, "_");
 		} else {

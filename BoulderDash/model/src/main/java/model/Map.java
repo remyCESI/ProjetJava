@@ -6,7 +6,7 @@ import java.util.*;
 import javax.swing.*;
 import view.*;
 
-public class Map {
+public class Map implements IMap{
 	
 	private Scanner m;
 	private String map[][] = new String[21][40];

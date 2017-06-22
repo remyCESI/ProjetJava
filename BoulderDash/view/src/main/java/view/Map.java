@@ -8,8 +8,8 @@ import javax.swing.*;
 public class Map implements IMap{
 	
 	private Scanner m;
-	private String map[][] = new String[21][40];
-	private String Map[] = new String[40];
+	private String map2d[][] = new String[21][40];
+	private String map1d[] = new String[40];
 	private Image sand, wall, empty, rock, diamond, monster;
 	private Image perso_face, perso_back, perso_left, perso_right;
 	private Image coal_ore, iron_ore, diamond_ore, gold_ore, emerald_ore, redstone_ore, lapis_ore;
@@ -174,7 +174,6 @@ public class Map implements IMap{
 	}
 	
 	
-	
 	public Image getCoal_ore() {
 		return coal_ore;
 	}
@@ -213,14 +212,12 @@ public class Map implements IMap{
 	}
 	
 	
-	public String getMap(int x, int y) {
-		//String index = Map[y].substring(x, x+1);
-		String index = map[y][x];
-		return index;
+	public synchronized String getMap(int x, int y) {
+		String sprite = map2d[y][x];
+		return sprite;
 	}
 	public void setMap(int x, int y, String sprite) {
-		//String index = Map[y].substring(x, x+1);
-		map[y][x] = sprite;
+		map2d[y][x] = sprite;
 	}
 	
 	
@@ -237,7 +234,7 @@ public class Map implements IMap{
 	public void readFile() {
 		while(m.hasNext()) {
 			for(int i = 0; i < 21; i++) {
-				Map[i] = m.next();
+				map1d[i] = m.next();
 			}
 		}
 	}
@@ -245,7 +242,7 @@ public class Map implements IMap{
 	private void completeMap() {
 		for(int x = 0; x < 40; x++) {
 			for(int y = 0; y<21; y++) {
-				map[y][x] = Map[y].substring(x, x+1);
+				map2d[y][x] = map1d[y].substring(x, x+1);
 			}
 		}
 	}

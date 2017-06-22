@@ -2,15 +2,13 @@ package view;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
-
 import javax.swing.*;
 
 public class Board extends JPanel implements ActionListener{
 
 	private Map m;
 	private Player p;
+	private Monster mm;
 	private Timer timer, timer2;
 	private Image image, dir;
 	private boolean cheat = false;
@@ -22,6 +20,9 @@ public class Board extends JPanel implements ActionListener{
 	public Board() {
 		m = new Map();
 		p = new Player();
+		mm = new Monster();
+		Thread thr = new Thread(mm);
+		thr.start();
 		addKeyListener(new Action());
 		setFocusable(true);
 		dir = m.getPerso_face();
@@ -129,6 +130,7 @@ public class Board extends JPanel implements ActionListener{
 					m.setMap(p.getX()-1, p.getY(), "_");
 					m.setMap(p.getX()-2, p.getY(), "O");
 					p.move(-1, 0);
+					Gravity(p.getX()-1, p.getY()+1);
 				}
 				dir = m.getPerso_left();
 			}
@@ -139,6 +141,7 @@ public class Board extends JPanel implements ActionListener{
 					m.setMap(p.getX()+1, p.getY(), "_");
 					m.setMap(p.getX()+2, p.getY(), "O");
 					p.move(1, 0);
+					Gravity(p.getX()+1, p.getY()+1);
 				}
 				dir = m.getPerso_right();
 			}
