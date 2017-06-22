@@ -7,7 +7,7 @@ import view.ViewFacade;
 
 /**
  * <h1>The Class Main.</h1>
- *The main method.
+ *The main method try to start the controller.
  *@author Tibo poly
  * @param args 
  * @version 1.0
