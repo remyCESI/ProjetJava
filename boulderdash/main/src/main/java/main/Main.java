@@ -1,34 +1,24 @@
 package main;
 
-import java.sql.SQLException;
-
 import controller.ControllerFacade;
-import model.ModelFacade;
+import model.BoulderDashModel;
+
 import view.ViewFacade;
 
 /**
  * <h1>The Class Main.</h1>
- *
-
-
- * @author Groupe remy thibault pierre aurelien 
-coucou*
+ *The main method.
+ *@author Tibo poly
+ * @param args 
  * @version 1.0
  */
 public abstract class Main {
-
-    /**
-     * The main method.
-     *
-     * @param args
-     *            the arguments
-     */
     public static void main(final String[] args) {
-        final ControllerFacade controller = new ControllerFacade(new ViewFacade(), new ModelFacade());
+        final ControllerFacade controller = new BoulderDashController(new BoulderDashView(), new BoulderDashModel());
 
         try {
             controller.start();
-        } catch (final SQLException exception) {
+        } catch (final Exception exception) {
             exception.printStackTrace();
         }
     }

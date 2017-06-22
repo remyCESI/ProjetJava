@@ -8,7 +8,4 @@ Pierre
 
 ![Banner](pc.png)
 
-## Deployment
-Prerequisites: **Eclipse**
-
 
