@@ -1,5 +1,6 @@
 /**
  * @author Thibault Rémy Aurélien Pierre
+
  * Class used to retrieve user interactions
  * @see EventPerformer
  * @see GraphicsBuilder
