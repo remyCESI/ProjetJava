@@ -18,7 +18,7 @@ public class Gravity extends BehaviorMove{
 	 */
 	public Gravity(Element element) {
 		// TODO Auto-generated constructor stub
-		while( ){
+		while(){
 			
 		element.setY(element.getY()+1);
 		
