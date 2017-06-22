@@ -14,8 +14,11 @@ import model.Element;
  */
 public class Fixe extends BehaviorMove{
 
-	public Fixe() {
-		// TODO Auto-generated constructor stub
+	public Fixe(Element element) {
+		
+		element.setX(element.getX());
+		element.setY(element.getY());
+		
 	}
 
 	/**
@@ -26,7 +29,7 @@ public class Fixe extends BehaviorMove{
 	@Override
 	public void move(Element element) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 }

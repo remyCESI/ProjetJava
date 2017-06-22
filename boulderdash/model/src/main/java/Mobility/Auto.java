@@ -27,7 +27,8 @@ public class Auto extends BehaviorMove{
  */
 	@Override
 	public void move(Element element) {
-		// TODO Auto-generated method stub
+		
+		
 		
 	}
 	
