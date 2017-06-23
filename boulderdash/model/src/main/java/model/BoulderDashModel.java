@@ -34,7 +34,7 @@ public class BoulderDashModel extends Observable implements IBoulderDashModel{
 	}
 	/**
 	 * She allows to choice the map. 
-	 * 
+	 * @param map wanted
 	 */
 	public void setMap(Map map) {
 		this.map = map;
@@ -42,7 +42,7 @@ public class BoulderDashModel extends Observable implements IBoulderDashModel{
 
 	/**
 	 * she allows to collect a element list
-	 * 
+	 * @return null
 	 */
 	public ArrayList<Element> getElement(){
 

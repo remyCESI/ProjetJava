@@ -8,7 +8,7 @@ import java.awt.Image;
 import Mobility.BehaviorMove;
 
 /**
- * @author L1dien
+ * @author remy
  * <H1> the IElement interface</H1> 
  *she allows to attribute the ability to create an element anywhere in the code.
  *
